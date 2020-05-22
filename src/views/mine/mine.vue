@@ -1,12 +1,19 @@
 <template>
     <div class="mine"> 
-        我的
+        <!-- 导航 -->
+        <navbar/>
     </div> 
 </template>
 
 <script>
+
+import navbar from 'components/navbar/navbar'
+
 export default {
-    name:"mine"
+    name:"mine",
+    components:{
+        navbar,
+    },
 }
 </script>
 

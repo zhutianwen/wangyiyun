@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="nav_title">
-            <div>
+            <div @click="SHOW_COVER">
                 <i class="iconfont icon-caidan"></i>
             </div>
             <div @click="goMine">我的</div>
@@ -16,9 +16,15 @@
 </template>
 
 <script>
+
+import {mapMutations} from 'vuex'
+
 export default {
     name:"navbar",
     methods:{
+        ...mapMutations([
+            'SHOW_COVER'
+        ]),
         goMine(){
             this.$router.push({
                 path:'/mine'
@@ -53,6 +59,7 @@ export default {
         background: #fff;
         position: fixed;
         top:0;
+        z-index: 99;
         font-size: 0.45rem;
         font-weight: bold;
         box-shadow: 0 2px 0 #e2d7ce;  

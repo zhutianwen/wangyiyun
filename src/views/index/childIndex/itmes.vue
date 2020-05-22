@@ -4,7 +4,7 @@
             <i class="iconfont icon-meirituijian"></i>
             <div class="itemes-title">每日推荐</div>
         </div>
-        <div>
+        <div @click="goGedan">
             <i class="iconfont icon-gedan"></i>
             <div class="itemes-title">歌单</div>
         </div>
@@ -21,7 +21,13 @@
 
 <script>
 export default {
-    
+    methods:{
+        goGedan(){
+            this.$router.push({
+                path:'/geDanGuangChang'
+            })
+        },
+    },
 }
 </script>
 

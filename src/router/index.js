@@ -4,6 +4,8 @@ import index from '@/views/index/index'
 import mine from '@/views/mine/mine'
 import yuncun from '@/views/yuncun/yuncun'
 import shipin from '@/views/shipin/shipin'
+import login from '@/views/login/login'
+import geDanGuangChang from '@/views/geDanGuangChang/geDanGuangChang'
 
 Vue.use(Router)
 
@@ -34,6 +36,16 @@ export default new Router({
       path: '/shipin',
       name: 'shipin',
       component: shipin
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/geDanGuangChang',
+      name: 'geDanGuangChang',
+      component: geDanGuangChang
     },
   ]
 })

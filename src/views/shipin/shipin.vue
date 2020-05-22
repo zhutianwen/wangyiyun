@@ -1,12 +1,19 @@
 <template>
     <div class="shipin"> 
-       视频
+       <!-- 导航 -->
+        <navbar/>
     </div> 
 </template>
 
 <script>
+
+import navbar from 'components/navbar/navbar'
+
 export default {
-    name:"shipin"
+    name:"shipin",
+    components:{
+        navbar,
+    },
 }
 </script>
 

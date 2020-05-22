@@ -1,12 +1,18 @@
 <template>
     <div class="yuncun"> 
-        云村
+        <!-- 导航 -->
+        <navbar/>
     </div> 
 </template>
 
 <script>
+import navbar from 'components/navbar/navbar'
+
 export default {
-    name:"yuncun"
+    name:"yuncun",
+    components:{
+        navbar,
+    },
 }
 </script>
 

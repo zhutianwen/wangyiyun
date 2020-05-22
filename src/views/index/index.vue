@@ -1,5 +1,7 @@
 <template>
     <div class="index"> 
+        <!-- 顶部nav -->
+        <navbar/>
         <!-- 轮播图 -->
         <swiper :bannersList='bannersList'></swiper>
         <!-- 分类 -->
@@ -8,10 +10,16 @@
         <recommendSong :recommedList="recommedList"></recommendSong>
         <!-- 新歌 新碟 -->
         <newsongdie :newslist="newslist" :newDie="newDie"></newsongdie>
+        <!-- 左侧菜单栏 -->
+        <left-cover></left-cover>
     </div> 
 </template>
 
 <script>
+import navbar from 'components/navbar/navbar'
+// import loading from 'components/loading/loading'
+
+import LeftCover from 'views/leftCover/leftCover'
 
 import swiper from './childIndex/swiper'
 import itemes from './childIndex/itmes'
@@ -51,7 +59,7 @@ export default {
         getrecomSonglist(){
             getrecomSonglist().then(res=>{
                 this.recommedList = res.result
-                console.log(this.recommedList)
+                // console.log(this.recommedList)
             })
         },
         getNewsSonglist(){//包装一层方法
@@ -66,10 +74,12 @@ export default {
         },
     },
     components:{
+        navbar,
         swiper,
         itemes,
         recommendSong,
         newsongdie,
+        LeftCover,
     },
 }
 </script>

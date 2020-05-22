@@ -139,3 +139,14 @@ a:link,a:active,a:visited,a:hover {
 .dn{
     display: none;
 }
+
+
+/* 过度动画 */
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
